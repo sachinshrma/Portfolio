@@ -36,24 +36,46 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding: 2rem;
+    justify-content: space-between;
+}
+.hero .message {
+    width: 50%;
+    padding-right: 10%;
+}
+.hero .icon {
+    width: 30%;
 }
 
 @media (max-width: 700px) {
     .hero {
       flex-direction: column;
+      flex: auto;
+      gap: 4rem;
+      height: 100%;
+    }
+    .hero .message {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+    .hero .icon {
+        flex-shrink: 1;
+    }
+    .downArrow {
+        visibility: hidden;
     }
   }
 
 .message .greet,
 .message .designation {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--secondary-text-color);
 }
 
 .name text {
-    stroke-width: .4;
-    animation: text-write 6s forwards;
+    stroke-width: .2;
+    animation: text-write 4s forwards;
 }
 
 .hero .icon svg {
@@ -66,27 +88,28 @@ body {
 .downArrow {
     cursor: pointer;
     width: 30px;
-    position: relative;
-    left: 50%;
     fill: var(--primary-text-color);
     opacity: 0;
     animation: arrowDown .8s linear 3s infinite alternate;
 }
 
+.center-container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
 @keyframes text-write {
     0% {
-        stroke: var(--secondary-text-color);
+        stroke: var(--primary-text-color);
         stroke-dashoffset: 25% 0;
         stroke-dasharray: 0 100;
     }
 
-    80% {
-        stroke: var(--secondary-text-color);
+    100% {
+        stroke: var(--primary-text-color);
         stroke-dashoffset: -25% 0;
         stroke-dasharray: 100 0;
-    }
-    
-    100% {
         fill: var(--primary-text-color);
     }
 }
