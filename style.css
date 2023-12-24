@@ -1,0 +1,88 @@
+:root {
+    --primary-bg-color: #232323;
+    --secondary-bg-color: #5d5d5d;
+    --primary-text-color: #ffff;
+    --secondary-text-color: #c6c5c5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway;
+    background-color: var(--primary-bg-color);
+}
+
+.header {
+    height: 4rem;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    gap: .3rem;
+}
+
+.header .label {
+    color: var(--primary-text-color);
+    font-size: 1.2rem;
+}
+
+.header .icon {
+    color: var(--primary-text-color);
+}
+
+.hero {
+    height: 40rem;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    position: relative;
+}
+
+.hero .message {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.message .greet,
+.message .designation {
+    font-size: 2.5rem;
+    color: var(--secondary-text-color);
+}
+
+/* .message .name {
+    font-size: 4.5rem;
+    font-weight: bold;
+} */
+
+
+/* .name text{
+    paint-order: stroke;
+    fill: transparent;
+    stroke-width: .5px;
+    animation: textWrite 3s ease 0 1 forwards;
+} */
+
+.name text {
+    stroke-width: .4;
+    animation: textWrite 4s forwards;
+}
+
+
+@keyframes textWrite {
+    0% {
+        stroke: var(--secondary-text-color);
+        stroke-dashoffset: 25% 0;
+        stroke-dasharray: 0 100;
+    }
+
+    80% {
+        stroke: var(--secondary-text-color);
+        stroke-dashoffset: -25% 0;
+        stroke-dasharray: 100 0;
+    }
+    
+    100% {
+        fill: var(--primary-text-color);
+    }
+}
