@@ -62,7 +62,7 @@ body {
     .hero .icon {
         flex-shrink: 1;
     }
-    .downArrow {
+    .down-arrow {
         visibility: hidden;
     }
   }
@@ -85,12 +85,12 @@ body {
     animation: stroke-write 6s ease-in-out forwards;
 }
 
-.downArrow {
+.down-arrow {
     cursor: pointer;
     width: 30px;
     fill: var(--primary-text-color);
     opacity: 0;
-    animation: arrowDown .8s linear 3s infinite alternate;
+    animation: arrow-down .8s linear 3s infinite alternate;
 }
 
 .center-container {
@@ -120,7 +120,7 @@ body {
     }
 }
 
-@keyframes arrowDown {
+@keyframes arrow-down {
     from {
         opacity: 0.5;
     }
