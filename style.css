@@ -52,7 +52,9 @@ body {
       flex-direction: column;
       flex: auto;
       gap: 4rem;
-      justify-content: space-around;
+      justify-content: space-evenly;
+      padding-bottom: 0;
+      padding-top: 0;
     }
     .hero .message {
         text-align: center;
