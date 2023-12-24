@@ -16,6 +16,7 @@ body {
     padding: 15px;
     background-color: var(--primary-bg-color);
     display: flex;
+    align-items: center;
     gap: .3rem;
 }
 
