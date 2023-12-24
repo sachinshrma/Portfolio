@@ -13,10 +13,7 @@ body {
 }
 
 .header {
-    height: 4rem;
-    width: 100%;
-    padding-left: 1.5rem;
-    padding-top: 1rem;
+    padding: 15px;
     background-color: var(--primary-bg-color);
     display: flex;
     gap: .3rem;
@@ -53,7 +50,6 @@ body {
 }
 
 .hero .icon svg {
-    scale: 3;
     stroke: var(--secondary-text-color);
     stroke-dashoffset: 10000;
     stroke-dasharray: 10000;
