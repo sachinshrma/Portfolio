@@ -36,12 +36,9 @@ body {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     position: relative;
-}
-
-.hero .message {
-    position: absolute;
-    top: 20%;
-    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .message .greet,
@@ -50,26 +47,30 @@ body {
     color: var(--secondary-text-color);
 }
 
-/* .message .name {
-    font-size: 4.5rem;
-    font-weight: bold;
-} */
-
-
-/* .name text{
-    paint-order: stroke;
-    fill: transparent;
-    stroke-width: .5px;
-    animation: textWrite 3s ease 0 1 forwards;
-} */
-
 .name text {
     stroke-width: .4;
-    animation: textWrite 4s forwards;
+    animation: text-write 6s forwards;
 }
 
+.hero .icon svg {
+    scale: 3;
+    stroke: var(--secondary-text-color);
+    stroke-dashoffset: 10000;
+    stroke-dasharray: 10000;
+    animation: stroke-write 6s ease-in-out forwards;
+}
 
-@keyframes textWrite {
+.downArrow {
+    cursor: pointer;
+    width: 30px;
+    position: relative;
+    left: 50%;
+    fill: var(--primary-text-color);
+    opacity: 0;
+    animation: arrowDown .8s linear 4s infinite alternate;
+}
+
+@keyframes text-write {
     0% {
         stroke: var(--secondary-text-color);
         stroke-dashoffset: 25% 0;
@@ -84,5 +85,22 @@ body {
     
     100% {
         fill: var(--primary-text-color);
+    }
+}
+
+@keyframes stroke-write {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes arrowDown {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 12px, 0);
     }
 }
